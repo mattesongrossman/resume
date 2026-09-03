@@ -19,12 +19,12 @@
       --sidebar-dark: #121316;
       --main-bg: #FFFFFF;
       --text-primary: #121316;
-      --text-secondary: #585A62;
+      --text-secondary: #52545C;
       --text-muted: #84868F;
       --rule: #E8E6DF;
       --accent: #C82A2A;
       --accent-light: #FBF1F1;
-      --sidebar-w: 268px;
+      --sidebar-w: 260px;
     }
 
     * {
@@ -38,17 +38,16 @@
       background: var(--bg-page);
       color: var(--text-primary);
       font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.5;
+      line-height: 1.42;
       -webkit-font-smoothing: antialiased;
     }
 
     .page {
       max-width: 850px;
-      margin: 28px auto;
+      margin: 20px auto;
       background: var(--main-bg);
       display: flex;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
-      min-height: 1100px;
       border-radius: 4px;
       overflow: hidden;
     }
@@ -59,7 +58,7 @@
       flex: 0 0 var(--sidebar-w);
       background: var(--sidebar-bg);
       color: var(--text-primary);
-      padding: 38px 24px 34px 28px;
+      padding: 28px 20px 24px 24px;
       border-right: 1px solid var(--sidebar-border);
       display: flex;
       flex-direction: column;
@@ -75,25 +74,25 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       background: var(--sidebar-dark);
       color: #FFFFFF;
       font-family: "Space Grotesk", sans-serif;
       font-weight: 700;
-      font-size: 11px;
+      font-size: 10.5px;
       letter-spacing: 0.5px;
       border-radius: 3px;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .name {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 700;
       line-height: 1.15;
-      margin: 0 0 6px 0;
-      letter-spacing: 0.5px;
+      margin: 0 0 4px 0;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
       color: var(--sidebar-dark);
     }
@@ -101,94 +100,35 @@
     .title {
       font-family: "Space Grotesk", sans-serif;
       color: var(--accent);
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 1.6px;
-      margin: 0 0 24px 0;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .sb-heading {
-      font-family: "Space Grotesk", sans-serif;
-      color: var(--sidebar-dark);
-      font-size: 10.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.4px;
-      margin: 18px 0 7px 0;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding-top: 2px;
-      border-top: 1px solid var(--sidebar-border);
-    }
-
-    .sb-heading:first-of-type {
-      margin-top: 0;
-    }
-
-    .sidebar p {
-      font-size: 11.5px;
-      line-height: 1.52;
-      color: var(--text-secondary);
-      margin: 0 0 8px 0;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .sidebar li {
-      font-size: 11.5px;
-      line-height: 1.6;
-      color: var(--text-secondary);
-      padding-left: 13px;
-      position: relative;
-      font-weight: 500;
-    }
-
-    .sidebar li::before {
-      content: "–";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .sb-note {
       font-size: 10px;
-      line-height: 1.45;
-      color: var(--text-muted);
-      margin-top: 14px;
-      padding-top: 8px;
-      border-top: 1px dashed var(--sidebar-border);
-      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      margin: 0 0 14px 0;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
 
     .contact-block {
-      margin-top: 14px;
-      padding-top: 10px;
+      margin-bottom: 12px;
+      padding-top: 8px;
       border-top: 1px solid var(--sidebar-border);
     }
 
     .contact-block .sb-heading {
-      color: var(--text-primary);
-      letter-spacing: 1.4px;
+      letter-spacing: 1.3px;
       margin-top: 0;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       font-weight: 700;
+      color: var(--text-primary);
       border-top: none;
       padding-top: 0;
     }
 
     .contact-block div:not(.sb-heading) {
-      font-size: 11px;
-      line-height: 1.8;
+      font-size: 10.5px;
+      line-height: 1.65;
       color: var(--text-secondary);
       word-break: break-word;
       font-weight: 500;
@@ -204,10 +144,65 @@
       color: var(--accent);
     }
 
+    .sb-heading {
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--sidebar-dark);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      margin: 11px 0 5px 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding-top: 6px;
+      border-top: 1px solid var(--sidebar-border);
+    }
+
+    .sidebar p {
+      font-size: 10.5px;
+      line-height: 1.45;
+      color: var(--text-secondary);
+      margin: 0 0 6px 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar li {
+      font-size: 10.5px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      padding-left: 12px;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .sidebar li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .sb-note {
+      font-size: 9.5px;
+      line-height: 1.38;
+      color: var(--text-muted);
+      margin-top: 10px;
+      padding-top: 6px;
+      border-top: 1px dashed var(--sidebar-border);
+      font-style: italic;
+    }
+
     /* ---------- Main Column ---------- */
     .main {
       flex: 1;
-      padding: 38px 36px 34px 36px;
+      padding: 28px 30px 24px 30px;
       min-width: 0;
       background: #FFFFFF;
     }
@@ -216,66 +211,66 @@
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      margin: 0 0 14px 0;
-      padding-bottom: 6px;
+      margin: 0 0 10px 0;
+      padding-bottom: 4px;
       border-bottom: 1.5px solid var(--sidebar-dark);
     }
 
     .main h2 {
       font-family: "Space Grotesk", sans-serif;
       color: var(--sidebar-dark);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.6px;
       margin: 0;
     }
 
     .section-tag {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 9.5px;
+      font-size: 9px;
       letter-spacing: 1.2px;
       color: var(--text-muted);
       text-transform: uppercase;
     }
 
     .job-block {
-      margin-bottom: 18px;
+      margin-bottom: 11px;
     }
 
     .job-header {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     .job-title {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 13.5px;
+      font-size: 12.5px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
       color: var(--sidebar-dark);
     }
 
     .job-date {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 600;
       color: var(--accent);
       font-family: "Space Grotesk", sans-serif;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
     }
 
     .job-sub {
-      font-size: 11.5px;
+      font-size: 11px;
       font-style: normal;
       font-weight: 500;
       color: var(--text-secondary);
-      margin: 0 0 6px 0;
+      margin: 0 0 3px 0;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .job-sub span.company {
@@ -284,18 +279,18 @@
     }
 
     .main ul {
-      margin: 0 0 4px 0;
-      padding-left: 16px;
+      margin: 0 0 2px 0;
+      padding-left: 14px;
       list-style: none;
     }
 
     .main li {
-      font-size: 12px;
-      line-height: 1.58;
+      font-size: 11px;
+      line-height: 1.46;
       color: var(--text-secondary);
-      margin-bottom: 4px;
+      margin-bottom: 2.5px;
       position: relative;
-      padding-left: 12px;
+      padding-left: 11px;
     }
 
     .main li::before {
@@ -303,24 +298,32 @@
       position: absolute;
       left: 0;
       color: var(--accent);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
     }
 
+    .h2-wrap {
+      margin-top: 14px;
+    }
+
+    .h2-wrap:first-child {
+      margin-top: 0;
+    }
+
     .edu-block {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .edu-header {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     .edu-degree {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.2px;
@@ -328,14 +331,14 @@
     }
 
     .edu-date {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 600;
       color: var(--text-muted);
       font-family: "Space Grotesk", sans-serif;
     }
 
     .edu-sub {
-      font-size: 11.5px;
+      font-size: 10.5px;
       color: var(--text-secondary);
       font-weight: 500;
     }
@@ -348,7 +351,7 @@
 
     .cert-name {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.2px;
@@ -356,37 +359,52 @@
     }
 
     .cert-date {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 600;
       color: var(--text-muted);
       font-family: "Space Grotesk", sans-serif;
     }
 
     .cert-sub {
-      font-size: 11.5px;
+      font-size: 10.5px;
       color: var(--text-secondary);
       font-weight: 500;
     }
 
-    /* ---------- Print & PDF ---------- */
+    /* ---------- Exact 1-Page PDF & Print Optimization ---------- */
+    @page {
+      size: letter portrait;
+      margin: 0;
+    }
+
     @media print {
-      body {
-        background: #FFFFFF;
+      html, body {
+        background: #FFFFFF !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 100% !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }
 
       .page {
-        margin: 0;
-        box-shadow: none;
-        max-width: none;
-        min-height: 0;
-        border-radius: 0;
+        margin: 0 !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        width: 8.5in !important;
+        height: 11in !important;
+        max-height: 11in !important;
+        border-radius: 0 !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
       }
 
-      @page {
-        size: letter;
-        margin: 0;
+      .sidebar {
+        padding: 0.32in 0.24in 0.28in 0.28in !important;
+      }
+
+      .main {
+        padding: 0.32in 0.32in 0.28in 0.32in !important;
       }
     }
   </style>
@@ -408,16 +426,13 @@
           <div>(516) 521-1492</div>
           <div><a href="https://mattesongrossman.com" target="_blank">mattesongrossman.com</a></div>
           <div><a href="mailto:mattesongrossman@gmail.com">mattesongrossman@gmail.com</a></div>
-          <div><a href="https://linkedin.com/in/mattesongrossman/" target="_blank">linkedin.com/in/mattesongrossman</a>
-          </div>
+          <div><a href="https://linkedin.com/in/mattesongrossman/" target="_blank">linkedin.com/in/mattesongrossman</a></div>
           <div>New York, NY</div>
         </div>
 
         <div class="sb-heading">Profile</div>
-        <p>CPA-turned-software engineer with a detail-oriented, analytical approach to complex architectures. Proven
-          track record developing scalable web applications and high-impact digital experiences.</p>
-        <p>Currently directs technical marketing campaigns for Fortune 500 brands while engineering intelligent
-          automations and modern web systems.</p>
+        <p>CPA-turned-software engineer with a detail-oriented, analytical approach to complex architectures. Proven track record developing scalable web applications and high-impact digital experiences.</p>
+        <p>Currently directs technical marketing campaigns for Fortune 500 brands while engineering intelligent automations and modern web systems.</p>
 
         <div class="sb-heading">MarTech &amp; Integrations</div>
         <ul>
@@ -450,9 +465,7 @@
           <li>Ruby on Rails / C++</li>
         </ul>
 
-        <br><br>
-        <p class="sb-note">* Technologies reflect active production workflows alongside prior project experience, with a
-          proven track record of rapid ramp-up on new stacks.</p>
+        <p class="sb-note">* Technologies reflect active production workflows alongside prior project experience, with a proven track record of rapid ramp-up on new stacks.</p>
       </div>
 
     </aside>
@@ -473,12 +486,9 @@
           </div>
           <div class="job-sub"><span class="company">Persado Inc</span> &nbsp;|&nbsp; New York, NY</div>
           <ul>
-            <li>Lead a team of service delivery engineers to fully execute end-to-end marketing campaigns for Fortune
-              500 clients, including 8 out of the top 10 US banks.</li>
-            <li>Executed hundreds of web, email, and social campaigns bringing Persado's experimentation to life across
-              enterprise platforms.</li>
-            <li>Coordinated with clients about technical capabilities and integrations in order to successfully execute
-              campaigns.</li>
+            <li>Lead a team of service delivery engineers to fully execute end-to-end marketing campaigns for Fortune 500 clients, including 8 out of the top 10 US banks.</li>
+            <li>Executed hundreds of web, email, and social campaigns bringing Persado's experimentation to life across enterprise platforms.</li>
+            <li>Coordinated with clients about technical capabilities and integrations in order to successfully execute campaigns.</li>
           </ul>
         </div>
 
@@ -491,10 +501,8 @@
           <div class="job-sub"><span class="company">Cadu</span> &nbsp;|&nbsp; New York, NY</div>
           <ul>
             <li>Fully redesigned the application to provide a cleaner and more efficient user experience.</li>
-            <li>Implemented Redux into the existing React TypeScript application to deliver a robust state management
-              architecture.</li>
-            <li>Engineered custom interface components and user onboarding flows, adding core functionality for client
-              engagement.</li>
+            <li>Implemented Redux into the existing React TypeScript application to deliver a robust state management architecture.</li>
+            <li>Engineered custom interface components and user onboarding flows, adding core functionality for client engagement.</li>
           </ul>
         </div>
 
@@ -506,12 +514,9 @@
           </div>
           <div class="job-sub"><span class="company">Curtn Inc.</span> &nbsp;|&nbsp; New York, NY</div>
           <ul>
-            <li>Built an administrative panel in React providing seamless administrative access to core mobile platform
-              functionalities.</li>
-            <li>Designed backend endpoints required for administrative workflows, including custom push notification
-              dispatches.</li>
-            <li>Collaborated directly with the CTO to design white-box test suites and orchestrated testing rounds with
-              beta users.</li>
+            <li>Built an administrative panel in React providing seamless administrative access to core mobile platform functionalities.</li>
+            <li>Designed backend endpoints required for administrative workflows, including custom push notification dispatches.</li>
+            <li>Collaborated directly with the CTO to design white-box test suites and orchestrated testing rounds with beta users.</li>
           </ul>
         </div>
 
@@ -523,10 +528,8 @@
           </div>
           <div class="job-sub"><span class="company">General Assembly</span> &nbsp;|&nbsp; New York, NY</div>
           <ul>
-            <li>Engineered and deployed full-stack web applications using JavaScript, React, Node.js, and Ruby on Rails.
-            </li>
-            <li>Developed full CRUD applications featuring RESTful API architectures, authentication, and database
-              persistence.</li>
+            <li>Engineered and deployed full-stack web applications using JavaScript, React, Node.js, and Ruby on Rails.</li>
+            <li>Developed full CRUD applications featuring RESTful API architectures, authentication, and database persistence.</li>
           </ul>
         </div>
 
@@ -538,18 +541,15 @@
           </div>
           <div class="job-sub"><span class="company">KPMG LLP</span> &nbsp;|&nbsp; New York, NY</div>
           <ul>
-            <li>Computed taxable income figures by analyzing client portfolios using specialized software to identify
-              patterns across 200,000+ security transactions.</li>
-            <li>Created an algorithm to identify straddle positions eligible for tax loss treatment, reducing taxable
-              income for select clients by $1M–$8M.</li>
-            <li>Instructed training courses for new associates, onboarding teams to industry-leading financial analysis
-              and modeling platforms.</li>
+            <li>Computed taxable income figures by analyzing client portfolios using specialized software to identify patterns across 200,000+ security transactions.</li>
+            <li>Created an algorithm to identify straddle positions eligible for tax loss treatment, reducing taxable income for select clients by $1M–$8M.</li>
+            <li>Instructed training courses for new associates, onboarding teams to industry-leading financial analysis and modeling platforms.</li>
           </ul>
         </div>
       </div>
 
       <!-- Education -->
-      <div class="h2-wrap" style="margin-top: 24px;">
+      <div class="h2-wrap">
         <div class="section-header">
           <h2>Education</h2>
           <span class="section-tag">[ ACADEMICS ]</span>
@@ -563,7 +563,7 @@
           <div class="edu-sub">Fordham University &nbsp;|&nbsp; New York, NY</div>
         </div>
 
-        <div class="edu-block" style="margin-bottom: 0;">
+        <div class="edu-block">
           <div class="edu-header">
             <div class="edu-degree">Bachelor of Science, Info Mgmt &amp; Tech / Accounting</div>
             <div class="edu-date">2010 – 2014</div>
@@ -573,7 +573,7 @@
       </div>
 
       <!-- Credentials -->
-      <div class="h2-wrap" style="margin-top: 22px;">
+      <div class="h2-wrap">
         <div class="section-header">
           <h2>Credentials</h2>
           <span class="section-tag">[ CERTIFICATION ]</span>
