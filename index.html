@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Matteson Grossman — Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --sidebar-blue: #44637E;
+    --sidebar-blue-dark: #38536A;
+    --sidebar-light: #C9D8E2;
+    --dark: #222222;
+    --grey: #5A5A5A;
+    --rule: #D9D9D9;
+    --sidebar-w: 260px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: var(--dark);
+    background: #EDEDED;
+  }
+
+  .page {
+    max-width: 850px;
+    margin: 24px auto;
+    background: #FFFFFF;
+    display: flex;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    min-height: 1100px;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar {
+    width: var(--sidebar-w);
+    flex: 0 0 var(--sidebar-w);
+    background: var(--sidebar-blue);
+    color: #FFFFFF;
+    padding: 36px 26px 30px 32px;
+  }
+
+  .name {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 12px 0;
+    letter-spacing: 0.3px;
+  }
+
+  .title {
+    color: var(--sidebar-light);
+    font-size: 12.5px;
+    letter-spacing: 1.4px;
+    margin: 0 0 28px 0;
+    text-transform: uppercase;
+  }
+
+  .sb-heading {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 22px 0 8px 0;
+  }
+
+  .sb-heading:first-of-type { margin-top: 0; }
+
+  .sidebar p {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #EAF0F4;
+    margin: 0 0 10px 0;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar li {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #EAF0F4;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .sidebar li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--sidebar-light);
+  }
+
+  .contact-block {
+    margin-top: 34px;
+    padding-top: 18px;
+    border-top: 1px solid var(--sidebar-light);
+    text-align: center;
+  }
+
+  .contact-block .sb-heading {
+    text-align: center;
+    letter-spacing: 1.4px;
+    margin-top: 0;
+  }
+
+  .contact-block div {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #FFFFFF;
+    word-break: break-word;
+  }
+
+  /* ---------- Main column ---------- */
+  .main {
+    flex: 1;
+    padding: 36px 34px 30px 34px;
+    min-width: 0;
+  }
+
+  .main h2 {
+    color: var(--sidebar-blue);
+    font-size: 16.5px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .main h2:not(:first-child) {
+    margin-top: 22px;
+  }
+
+  .job-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 14px 0 2px 0;
+  }
+
+  .job-title:first-of-type { margin-top: 0; }
+
+  .job-sub {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    font-style: italic;
+    color: var(--grey);
+    margin: 0 0 6px 0;
+  }
+
+  .main ul {
+    margin: 0 0 4px 0;
+    padding-left: 18px;
+  }
+
+  .main li {
+    font-size: 12.5px;
+    line-height: 1.55;
+    margin-bottom: 3px;
+  }
+
+  .edu-degree {
+    font-size: 12.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 12px 0 2px 0;
+  }
+
+  .edu-degree:first-of-type { margin-top: 0; }
+
+  .edu-sub {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    font-style: italic;
+    color: var(--grey);
+    margin: 0 0 4px 0;
+  }
+
+  .cert-name {
+    font-size: 12.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 2px 0;
+  }
+
+  .cert-sub {
+    font-size: 11.5px;
+    font-style: italic;
+    color: var(--grey);
+    margin: 0;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: #FFFFFF; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      max-width: none;
+      min-height: 0;
+    }
+    @page { size: letter; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="name">MATTESON<br>GROSSMAN</div>
+    <div class="title">Software Engineer</div>
+
+    <div class="sb-heading">Profile</div>
+    <p>CPA-turned-software engineer, driven by a detail-oriented, logistician approach to problem-solving. Proven track record developing full-stack web applications and devising creative solutions that enhance user experiences.</p>
+    <p>Currently brings impactful marketing campaigns to life for Fortune 500 brands, and is eager to apply technical skills and experience to every new challenge.</p>
+
+    <div class="sb-heading">Front-End Development</div>
+    <ul>
+      <li>JavaScript / TypeScript</li>
+      <li>Python</li>
+      <li>React / Redux</li>
+      <li>HTML5 / CSS</li>
+    </ul>
+
+    <div class="sb-heading">Back-End Development</div>
+    <ul>
+      <li>Node.js</li>
+      <li>PostgreSQL</li>
+      <li>Express</li>
+    </ul>
+
+    <div class="sb-heading">Past Experience With</div>
+    <ul>
+      <li>C++</li>
+      <li>Ruby</li>
+      <li>SQLite</li>
+      <li>Ruby on Rails</li>
+      <li>Tailwind / Bootstrap / Material UI</li>
+    </ul>
+
+    <div class="contact-block">
+      <div class="sb-heading">Contact</div>
+      <div>(516) 521-1492</div>
+      <div>mattesongrossman.com</div>
+      <div>mattesongrossman@gmail.com</div>
+      <div>linkedin.com/in/matteson-grossman</div>
+    </div>
+  </aside>
+
+  <!-- Main column -->
+  <main class="main">
+    <h2>Experience</h2>
+
+    <div class="job-title">Service Delivery Manager</div>
+    <div class="job-sub"><span>Persado Inc &nbsp;|&nbsp; New York, NY</span><span>May 2021 – Present</span></div>
+    <ul>
+      <li>Leading a team of service delivery engineers to fully execute end-to-end marketing campaigns for Fortune 500 clients, including 8 out of the top 10 US banks./li>
+      <li>Executed hundreds of web, email, and social campaigns bringing Persado's experimentation to life on various platforms</li>
+      <li>Coordinated with clients about technical capabilities and integrations in order to successfully execute campaigns</li>
+    </ul>
+
+    <div class="job-title">Software Engineer, Freelance</div>
+    <div class="job-sub"><span>Cadu &nbsp;|&nbsp; New York, NY</span><span>Sept 2020 – Jan 2021</span></div>
+    <ul>
+      <li>Fully redesigned the application to provide a cleaner and more efficient experience for users</li>
+      <li>Implemented Redux into the existing React TypeScript application to provide a robust state management architecture</li>
+      <li>Created various components adding key functionalities for the user such as signup forms</li>
+    </ul>
+
+    <div class="job-title">Software Engineer Intern</div>
+    <div class="job-sub"><span>Curtain Inc &nbsp;|&nbsp; New York, NY</span><span>Summer 2019</span></div>
+    <ul>
+      <li>Built an administrative panel in React providing seamless access to core functionalities</li>
+      <li>Designed back-end endpoints necessary for the creation of new functionalities on the admin portal such as sending custom push notifications to specific users/groups</li>
+      <li>Worked with the CTO directly to create and design white-box testing methods; orchestrated test rounds with beta users for black-box testing</li>
+    </ul>
+
+    <div class="job-title">Web Development Immersive</div>
+    <div class="job-sub"><span>General Assembly &nbsp;|&nbsp; New York, NY</span><span>Feb – May 2018</span></div>
+    <ul>
+      <li>Designed/built and deployed multiple projects using several front-end/back-end languages and frameworks including JavaScript, ReactJS and Ruby on Rails</li>
+      <li>Developed various full CRUD applications with a RESTful API, authentication and authorization</li>
+    </ul>
+
+    <div class="job-title">Senior Associate / Associate | Alt Investments Tax</div>
+    <div class="job-sub"><span>KPMG LLP &nbsp;|&nbsp; New York, NY</span><span>Oct 2014 – Dec 2017</span></div>
+    <ul>
+      <li>Computed taxable income figures by analyzing client portfolios using software designed to identify patterns in data of 200,000+ security transactions</li>
+      <li>Created an algorithm to specifically identify certain straddle positions eligible for losses; helping reduce taxable income for some clients in excess of $1–$8 million</li>
+      <li>Instructed multiple training courses for new hires designed to educate them to be proficient with industry leading software</li>
+    </ul>
+
+    <h2>Education</h2>
+    <div class="edu-degree">Master of Science, Computer Science</div>
+    <div class="edu-sub"><span>Fordham University</span><span>2019 – 2020</span></div>
+
+    <div class="edu-degree">Bachelor of Science, Info Mgmt &amp; Tech / Accounting</div>
+    <div class="edu-sub"><span>Syracuse University</span><span>2010 – 2014</span></div>
+
+    <h2>Miscellaneous</h2>
+    <div class="cert-name">Certified Public Accountant</div>
+    <div class="cert-sub">NYS Board for Public Accountancy &nbsp;|&nbsp; 2016</div>
+  </main>
+
+</div>
+
+</body>
+</html>
