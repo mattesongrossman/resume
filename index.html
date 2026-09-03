@@ -4,76 +4,128 @@
 <meta charset="UTF-8">
 <title>Matteson Grossman — Resume</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
   :root {
-    --sidebar-blue: #44637E;
-    --sidebar-blue-dark: #38536A;
-    --sidebar-light: #C9D8E2;
-    --dark: #222222;
-    --grey: #5A5A5A;
-    --rule: #D9D9D9;
-    --sidebar-w: 260px;
+    --bg-page: #ECEBE6;
+    --sidebar-bg: #F5F4F0;
+    --sidebar-border: #E5E3DC;
+    --sidebar-dark: #121316;
+    --main-bg: #FFFFFF;
+    --text-primary: #121316;
+    --text-secondary: #585A62;
+    --text-muted: #84868F;
+    --rule: #E8E6DF;
+    --accent: #C82A2A;
+    --accent-light: #FBF1F1;
+    --sidebar-w: 265px;
   }
 
-  * { box-sizing: border-box; }
-
-  html, body {
+  * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    color: var(--dark);
-    background: #EDEDED;
+  }
+
+  html, body {
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
 
   .page {
     max-width: 850px;
-    margin: 24px auto;
-    background: #FFFFFF;
+    margin: 28px auto;
+    background: var(--main-bg);
     display: flex;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
     min-height: 1100px;
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   /* ---------- Sidebar ---------- */
   .sidebar {
     width: var(--sidebar-w);
     flex: 0 0 var(--sidebar-w);
-    background: var(--sidebar-blue);
+    background: var(--sidebar-bg);
+    color: var(--text-primary);
+    padding: 40px 26px 36px 30px;
+    border-right: 1px solid var(--sidebar-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .sb-top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--sidebar-dark);
     color: #FFFFFF;
-    padding: 36px 26px 30px 32px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    margin-bottom: 14px;
   }
 
   .name {
-    font-size: 27px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.15;
-    margin: 0 0 12px 0;
-    letter-spacing: 0.3px;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--sidebar-dark);
   }
 
   .title {
-    color: var(--sidebar-light);
-    font-size: 12.5px;
-    letter-spacing: 1.4px;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--accent);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
     margin: 0 0 28px 0;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .sb-heading {
-    color: #FFFFFF;
-    font-size: 13px;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--sidebar-dark);
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
-    margin: 22px 0 8px 0;
+    letter-spacing: 1.5px;
+    margin: 22px 0 9px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .sb-heading:first-of-type { margin-top: 0; }
 
   .sidebar p {
-    font-size: 12.5px;
-    line-height: 1.5;
-    color: #EAF0F4;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--text-secondary);
     margin: 0 0 10px 0;
   }
 
@@ -84,131 +136,238 @@
   }
 
   .sidebar li {
-    font-size: 12.5px;
-    line-height: 1.6;
-    color: #EAF0F4;
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--text-secondary);
     padding-left: 14px;
     position: relative;
+    font-weight: 500;
   }
 
   .sidebar li::before {
-    content: "•";
+    content: "–";
     position: absolute;
     left: 0;
-    color: var(--sidebar-light);
+    color: var(--accent);
+    font-weight: 700;
   }
 
   .contact-block {
-    margin-top: 34px;
-    padding-top: 18px;
-    border-top: 1px solid var(--sidebar-light);
-    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--sidebar-border);
   }
 
   .contact-block .sb-heading {
-    text-align: center;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.5px;
     margin-top: 0;
+    margin-bottom: 10px;
   }
 
   .contact-block div {
-    font-size: 12px;
-    line-height: 1.8;
-    color: #FFFFFF;
+    font-size: 11.5px;
+    line-height: 1.85;
+    color: var(--text-secondary);
     word-break: break-word;
+    font-weight: 500;
   }
 
-  /* ---------- Main column ---------- */
+  .contact-block a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .contact-block a:hover {
+    color: var(--accent);
+  }
+
+  /* ---------- Main Column ---------- */
   .main {
     flex: 1;
-    padding: 36px 34px 30px 34px;
+    padding: 40px 38px 36px 38px;
     min-width: 0;
+    background: #FFFFFF;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 14px 0;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid var(--sidebar-dark);
   }
 
   .main h2 {
-    color: var(--sidebar-blue);
-    font-size: 16.5px;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--sidebar-dark);
+    font-size: 14px;
     font-weight: 700;
-    margin: 0 0 10px 0;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--rule);
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    margin: 0;
   }
 
-  .main h2:not(:first-child) {
-    margin-top: 22px;
+  .section-tag {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 1.2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .main h2-wrap:not(:first-child) {
+    margin-top: 26px;
+  }
+
+  .job-block {
+    margin-bottom: 18px;
+  }
+
+  .job-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2px;
   }
 
   .job-title {
-    font-size: 13px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13.5px;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 14px 0 2px 0;
+    letter-spacing: 0.3px;
+    color: var(--sidebar-dark);
   }
 
-  .job-title:first-of-type { margin-top: 0; }
+  .job-date {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 0.4px;
+  }
 
   .job-sub {
-    display: flex;
-    justify-content: space-between;
     font-size: 11.5px;
-    font-style: italic;
-    color: var(--grey);
+    font-style: normal;
+    font-weight: 500;
+    color: var(--text-secondary);
     margin: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .job-sub span.company {
+    font-weight: 600;
+    color: var(--sidebar-dark);
   }
 
   .main ul {
     margin: 0 0 4px 0;
-    padding-left: 18px;
+    padding-left: 16px;
+    list-style: none;
   }
 
   .main li {
-    font-size: 12.5px;
-    line-height: 1.55;
-    margin-bottom: 3px;
+    font-size: 12px;
+    line-height: 1.58;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    position: relative;
+    padding-left: 12px;
+  }
+
+  .main li::before {
+    content: "↳";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .edu-block {
+    margin-bottom: 12px;
+  }
+
+  .edu-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2px;
   }
 
   .edu-degree {
-    font-size: 12.5px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 12px 0 2px 0;
+    letter-spacing: 0.2px;
+    color: var(--sidebar-dark);
   }
 
-  .edu-degree:first-of-type { margin-top: 0; }
+  .edu-date {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-family: "Space Grotesk", sans-serif;
+  }
 
   .edu-sub {
-    display: flex;
-    justify-content: space-between;
     font-size: 11.5px;
-    font-style: italic;
-    color: var(--grey);
-    margin: 0 0 4px 0;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .cert-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
   }
 
   .cert-name {
+    font-family: "Space Grotesk", sans-serif;
     font-size: 12.5px;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 0 0 2px 0;
+    letter-spacing: 0.2px;
+    color: var(--sidebar-dark);
+  }
+
+  .cert-date {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-family: "Space Grotesk", sans-serif;
   }
 
   .cert-sub {
     font-size: 11.5px;
-    font-style: italic;
-    color: var(--grey);
-    margin: 0;
+    color: var(--text-secondary);
+    font-weight: 500;
   }
 
-  /* ---------- Print ---------- */
+  /* ---------- Print & PDF ---------- */
   @media print {
-    body { background: #FFFFFF; }
+    body {
+      background: #FFFFFF;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
     .page {
       margin: 0;
       box-shadow: none;
       max-width: none;
       min-height: 0;
+      border-radius: 0;
     }
-    @page { size: letter; margin: 0; }
+    @page {
+      size: letter;
+      margin: 0;
+    }
   }
 </style>
 </head>
@@ -218,99 +377,165 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="name">MATTESON<br>GROSSMAN</div>
-    <div class="title">Software Engineer</div>
+    <div class="sb-top">
+      <div class="brand-badge">MG</div>
+      <div class="name">Matteson<br>Grossman</div>
+      <div class="title">Software &amp; AI Systems</div>
 
-    <div class="sb-heading">Profile</div>
-    <p>CPA-turned-software engineer, driven by a detail-oriented, logistician approach to problem-solving. Proven track record developing full-stack web applications and devising creative solutions that enhance user experiences.</p>
-    <p>Currently brings impactful marketing campaigns to life for Fortune 500 brands, and is eager to apply technical skills and experience to every new challenge.</p>
+      <div class="sb-heading">Profile</div>
+      <p>CPA-turned-software engineer with a detail-oriented, analytical approach to complex architectures. Proven track record developing scalable web applications and high-impact digital experiences.</p>
+      <p>Currently directs technical marketing campaigns for Fortune 500 brands while engineering intelligent automations and modern web systems.</p>
 
-    <div class="sb-heading">Front-End Development</div>
-    <ul>
-      <li>JavaScript / TypeScript</li>
-      <li>Python</li>
-      <li>React / Redux</li>
-      <li>HTML5 / CSS</li>
-    </ul>
+      <div class="sb-heading">Front-End Architecture</div>
+      <ul>
+        <li>JavaScript / TypeScript</li>
+        <li>Python</li>
+        <li>React / Redux</li>
+        <li>HTML5 / CSS / Tailwind</li>
+      </ul>
 
-    <div class="sb-heading">Back-End Development</div>
-    <ul>
-      <li>Node.js</li>
-      <li>PostgreSQL</li>
-      <li>Express</li>
-    </ul>
+      <div class="sb-heading">Back-End &amp; Systems</div>
+      <ul>
+        <li>Node.js / Express</li>
+        <li>PostgreSQL / SQLite</li>
+        <li>REST &amp; GraphQL APIs</li>
+        <li>Firebase</li>
+      </ul>
 
-    <div class="sb-heading">Past Experience With</div>
-    <ul>
-      <li>C++</li>
-      <li>Ruby</li>
-      <li>SQLite</li>
-      <li>Ruby on Rails</li>
-      <li>Tailwind / Bootstrap / Material UI</li>
-    </ul>
+      <div class="sb-heading">Technical Expertise</div>
+      <ul>
+        <li>System Architecture &amp; OOD</li>
+        <li>Automations &amp; Integrations</li>
+        <li>Enterprise Experimentation</li>
+        <li>Ruby on Rails / C++</li>
+      </ul>
+    </div>
 
     <div class="contact-block">
       <div class="sb-heading">Contact</div>
       <div>(516) 521-1492</div>
-      <div>mattesongrossman.com</div>
-      <div>mattesongrossman@gmail.com</div>
-      <div>linkedin.com/in/matteson-grossman</div>
+      <div><a href="https://mattesongrossman.com" target="_blank">mattesongrossman.com</a></div>
+      <div><a href="mailto:mattesongrossman@gmail.com">mattesongrossman@gmail.com</a></div>
+      <div><a href="https://linkedin.com/in/mattesongrossman/" target="_blank">linkedin.com/in/mattesongrossman</a></div>
+      <div>New York, NY</div>
     </div>
   </aside>
 
   <!-- Main column -->
   <main class="main">
-    <h2>Experience</h2>
+    <div class="h2-wrap">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <span class="section-tag">[ CATALOG // 2014 – PRESENT ]</span>
+      </div>
 
-    <div class="job-title">Service Delivery Manager</div>
-    <div class="job-sub"><span>Persado Inc &nbsp;|&nbsp; New York, NY</span><span>May 2021 – Present</span></div>
-    <ul>
-      <li>Leading a team of service delivery engineers to fully execute end-to-end marketing campaigns for Fortune 500 clients, including 8 out of the top 10 US banks./li>
-      <li>Executed hundreds of web, email, and social campaigns bringing Persado's experimentation to life on various platforms</li>
-      <li>Coordinated with clients about technical capabilities and integrations in order to successfully execute campaigns</li>
-    </ul>
+      <!-- Persado -->
+      <div class="job-block">
+        <div class="job-header">
+          <div class="job-title">Service Delivery Manager</div>
+          <div class="job-date">May 2021 – Present</div>
+        </div>
+        <div class="job-sub"><span class="company">Persado Inc</span> &nbsp;|&nbsp; New York, NY</div>
+        <ul>
+          <li>Lead a team of service delivery engineers to fully execute end-to-end marketing campaigns for Fortune 500 clients, including 8 out of the top 10 US banks.</li>
+          <li>Executed hundreds of web, email, and social campaigns bringing Persado's experimentation to life across enterprise platforms.</li>
+          <li>Coordinated with clients about technical capabilities and integrations in order to successfully execute campaigns.</li>
+        </ul>
+      </div>
 
-    <div class="job-title">Software Engineer, Freelance</div>
-    <div class="job-sub"><span>Cadu &nbsp;|&nbsp; New York, NY</span><span>Sept 2020 – Jan 2021</span></div>
-    <ul>
-      <li>Fully redesigned the application to provide a cleaner and more efficient experience for users</li>
-      <li>Implemented Redux into the existing React TypeScript application to provide a robust state management architecture</li>
-      <li>Created various components adding key functionalities for the user such as signup forms</li>
-    </ul>
+      <!-- Cadu -->
+      <div class="job-block">
+        <div class="job-header">
+          <div class="job-title">Software Engineer, Freelance</div>
+          <div class="job-date">Sept 2020 – Jan 2021</div>
+        </div>
+        <div class="job-sub"><span class="company">Cadu</span> &nbsp;|&nbsp; New York, NY</div>
+        <ul>
+          <li>Fully redesigned the application to provide a cleaner and more efficient user experience.</li>
+          <li>Implemented Redux into the existing React TypeScript application to deliver a robust state management architecture.</li>
+          <li>Engineered custom interface components and user onboarding flows, adding core functionality for client engagement.</li>
+        </ul>
+      </div>
 
-    <div class="job-title">Software Engineer Intern</div>
-    <div class="job-sub"><span>Curtain Inc &nbsp;|&nbsp; New York, NY</span><span>Summer 2019</span></div>
-    <ul>
-      <li>Built an administrative panel in React providing seamless access to core functionalities</li>
-      <li>Designed back-end endpoints necessary for the creation of new functionalities on the admin portal such as sending custom push notifications to specific users/groups</li>
-      <li>Worked with the CTO directly to create and design white-box testing methods; orchestrated test rounds with beta users for black-box testing</li>
-    </ul>
+      <!-- Curtn -->
+      <div class="job-block">
+        <div class="job-header">
+          <div class="job-title">Software Engineer Intern</div>
+          <div class="job-date">Summer 2019</div>
+        </div>
+        <div class="job-sub"><span class="company">Curtn Inc.</span> &nbsp;|&nbsp; New York, NY</div>
+        <ul>
+          <li>Built an administrative panel in React providing seamless administrative access to core mobile platform functionalities.</li>
+          <li>Designed backend endpoints required for administrative workflows, including custom push notification dispatches.</li>
+          <li>Collaborated directly with the CTO to design white-box test suites and orchestrated testing rounds with beta users.</li>
+        </ul>
+      </div>
 
-    <div class="job-title">Web Development Immersive</div>
-    <div class="job-sub"><span>General Assembly &nbsp;|&nbsp; New York, NY</span><span>Feb – May 2018</span></div>
-    <ul>
-      <li>Designed/built and deployed multiple projects using several front-end/back-end languages and frameworks including JavaScript, ReactJS and Ruby on Rails</li>
-      <li>Developed various full CRUD applications with a RESTful API, authentication and authorization</li>
-    </ul>
+      <!-- General Assembly -->
+      <div class="job-block">
+        <div class="job-header">
+          <div class="job-title">Software Engineering Immersive</div>
+          <div class="job-date">Feb – May 2018</div>
+        </div>
+        <div class="job-sub"><span class="company">General Assembly</span> &nbsp;|&nbsp; New York, NY</div>
+        <ul>
+          <li>Engineered and deployed full-stack web applications using JavaScript, React, Node.js, and Ruby on Rails.</li>
+          <li>Developed full CRUD applications featuring RESTful API architectures, authentication, and database persistence.</li>
+        </ul>
+      </div>
 
-    <div class="job-title">Senior Associate / Associate | Alt Investments Tax</div>
-    <div class="job-sub"><span>KPMG LLP &nbsp;|&nbsp; New York, NY</span><span>Oct 2014 – Dec 2017</span></div>
-    <ul>
-      <li>Computed taxable income figures by analyzing client portfolios using software designed to identify patterns in data of 200,000+ security transactions</li>
-      <li>Created an algorithm to specifically identify certain straddle positions eligible for losses; helping reduce taxable income for some clients in excess of $1–$8 million</li>
-      <li>Instructed multiple training courses for new hires designed to educate them to be proficient with industry leading software</li>
-    </ul>
+      <!-- KPMG -->
+      <div class="job-block">
+        <div class="job-header">
+          <div class="job-title">Senior Associate / Associate | Alt Investments Tax</div>
+          <div class="job-date">Oct 2014 – Dec 2017</div>
+        </div>
+        <div class="job-sub"><span class="company">KPMG LLP</span> &nbsp;|&nbsp; New York, NY</div>
+        <ul>
+          <li>Computed taxable income figures by analyzing client portfolios using specialized software to identify patterns across 200,000+ security transactions.</li>
+          <li>Created an algorithm to identify straddle positions eligible for tax loss treatment, reducing taxable income for select clients by $1M–$8M.</li>
+          <li>Instructed training courses for new associates, onboarding teams to industry-leading financial analysis and modeling platforms.</li>
+        </ul>
+      </div>
+    </div>
 
-    <h2>Education</h2>
-    <div class="edu-degree">Master of Science, Computer Science</div>
-    <div class="edu-sub"><span>Fordham University</span><span>2019 – 2020</span></div>
+    <!-- Education -->
+    <div class="h2-wrap" style="margin-top: 24px;">
+      <div class="section-header">
+        <h2>Education</h2>
+        <span class="section-tag">[ ACADEMICS ]</span>
+      </div>
 
-    <div class="edu-degree">Bachelor of Science, Info Mgmt &amp; Tech / Accounting</div>
-    <div class="edu-sub"><span>Syracuse University</span><span>2010 – 2014</span></div>
+      <div class="edu-block">
+        <div class="edu-header">
+          <div class="edu-degree">Master of Science, Computer Science</div>
+          <div class="edu-date">2019 – 2020</div>
+        </div>
+        <div class="edu-sub">Fordham University &nbsp;|&nbsp; New York, NY</div>
+      </div>
 
-    <h2>Miscellaneous</h2>
-    <div class="cert-name">Certified Public Accountant</div>
-    <div class="cert-sub">NYS Board for Public Accountancy &nbsp;|&nbsp; 2016</div>
+      <div class="edu-block" style="margin-bottom: 0;">
+        <div class="edu-header">
+          <div class="edu-degree">Bachelor of Science, Info Mgmt &amp; Tech / Accounting</div>
+          <div class="edu-date">2010 – 2014</div>
+        </div>
+        <div class="edu-sub">Syracuse University &nbsp;|&nbsp; Syracuse, NY</div>
+      </div>
+    </div>
+
+    <!-- Credentials -->
+    <div class="h2-wrap" style="margin-top: 22px;">
+      <div class="section-header">
+        <h2>Credentials</h2>
+        <span class="section-tag">[ CERTIFICATION ]</span>
+      </div>
+
+      <div class="cert-header">
+        <div class="cert-name">Certified Public Accountant (CPA)</div>
+        <div class="cert-date">2016</div>
+      </div>
+      <div class="cert-sub">NYS Board for Public Accountancy</div>
+    </div>
   </main>
 
 </div>
